@@ -139,9 +139,9 @@ INCURRING SUCH DAMAGES IN ADVANCE.
 ## Bibliography
 If you use this dataset, please **cite the following publications**:
 
-[1] Leonidas Spinoulas, Hengameh Mirzaalian, Mohamed Hussein, and Wael AbdAlmageed, “[Multi-Modal Fingerprint Presentation Attack Detection: Evaluation On A New Dataset](https://arxiv.org/abs/2006.07498)” <em>ArXiv</em>, vol. abs/2006.07498, 2020
+[1] [Leonidas Spinoulas](https://scholar.google.com/citations?user=SAw0POgAAAAJ&hl=en), [Hengameh Mirzaalian](https://scholar.google.com/citations?user=BzaQhsoAAAAJ&hl=en), [Mohamed Hussein](https://scholar.google.com/citations?hl=en&user=jCUt0o0AAAAJ), and [Wael AbdAlmageed](https://scholar.google.com/citations?hl=en&user=tRGH8FkAAAAJ), “[Multi-Modal Fingerprint Presentation Attack Detection: Evaluation On A New Dataset](https://arxiv.org/abs/2006.07498)” <em>ArXiv</em>, vol. abs/2006.07498, 2020
 
-[2] Leonidas Spinoulas, Mohamed Hussein, David Geissbühler, Joe Mathai, Oswin G. Almeida, Guillaume Clivaz, Sébastien Marcel, and Wael AbdAlmageed, 
+[2] [Leonidas Spinoulas](https://scholar.google.com/citations?user=SAw0POgAAAAJ&hl=en), [Mohamed Hussein](https://scholar.google.com/citations?hl=en&user=jCUt0o0AAAAJ), [David Geissbühler](https://scholar.google.ch/citations?user=jbmrfWQAAAAJ&hl=fr), Joe Mathai, Oswin G. Almeida, Guillaume Clivaz, [Sébastien Marcel](https://scholar.google.com/citations?user=K9ku4jYAAAAJ&hl=en), and [Wael AbdAlmageed](https://scholar.google.com/citations?hl=en&user=tRGH8FkAAAAJ), 
 “[Multispectral Biometrics System Framework: Application to Presentation Attack Detection](https://arxiv.org/abs/2006.07489)” <em>ArXiv</em>, vol. abs/2006.07489, 2020
 
 ```
