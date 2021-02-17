@@ -139,9 +139,9 @@ INCURRING SUCH DAMAGES IN ADVANCE.
 ## Bibliography
 If you use this dataset, please **cite the following publications**:
 
-Leonidas Spinoulas, Hengameh Mirzaalian, Mohamed Hussein, and Wael AbdAlmageed, “[Multi-Modal Fingerprint Presentation Attack Detection: Evaluation On A New Dataset](https://arxiv.org/abs/2006.07498)” <em>ArXiv</em>, vol. abs/2006.07498, 2020
+[1] Leonidas Spinoulas, Hengameh Mirzaalian, Mohamed Hussein, and Wael AbdAlmageed, “[Multi-Modal Fingerprint Presentation Attack Detection: Evaluation On A New Dataset](https://arxiv.org/abs/2006.07498)” <em>ArXiv</em>, vol. abs/2006.07498, 2020
 
-Leonidas Spinoulas, Mohamed Hussein, David Geissbühler, Joe Mathai, Oswin G. Almeida, Guillaume Clivaz, Sébastien Marcel, and Wael AbdAlmageed, 
+[2] Leonidas Spinoulas, Mohamed Hussein, David Geissbühler, Joe Mathai, Oswin G. Almeida, Guillaume Clivaz, Sébastien Marcel, and Wael AbdAlmageed, 
 “[Multispectral Biometrics System Framework: Application to Presentation Attack Detection](https://arxiv.org/abs/2006.07489)” <em>ArXiv</em>, vol. abs/2006.07489, 2020
 
 ```
