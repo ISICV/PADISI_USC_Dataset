@@ -25,7 +25,7 @@ The ground truth file is located under [data/finger_partitions/padisi_USC_FINGER
 ### <ins>Partition files</ins>
 All partition files are also located under [data/finger_partitions](./data/finger_partitions) with descriptive names. They involve all `3FOLD` and `LOO` protocols presented in the paper.
 Each `.csv` file contains the following columns:
-* `transaction_id`, `trial_id`, `trial_name`: Same as in the ground truth, [above](#ground-truth-file). Can be used to uniquely associate each row of a partition `.csv` file to a row in the ground truth `.csv` file.
+* `transaction_id`, `trial_id`, `trial_name`: Same as in the ground truth, [above](#insground-truth-fileins). Can be used to uniquely associate each row of a partition `.csv` file to a row in the ground truth `.csv` file.
 * `partition_name`: One of `['train', 'valid', 'test']` specifying if a sample belongs to the `training`, `validation` or `testing` set, respectively.
 
 <code>
@@ -39,7 +39,9 @@ Each `.csv` file contains the following columns:
 
 ## Downloading the dataset 
 
-1. Please download and sign the provided [Data Transfer and Use Agreement](./documents/PADISI_USC_Finger_Data_Sharing_Agreement.pdf).
+1. Please download and sign the provided [Data Transfer and Use Agreement](./documents/PADISI_USC_Finger_Data_Sharing_Agreement.pdf). 
+Both the recipient (must be a project's principal investigator) and an official with authorized signatory of the recipient’s organization must sign the agreement. 
+For example, at a university, the official is typically an administrative official, rather than a student or faculty member.
 2. Submit the request and upload your **signed** Data Transfer and Use Agreement at [PADISI-USC Finger Dataset Request](https://docs.google.com/forms/d/e/1FAIpQLSfPAX9JbmehkbD4ss3zVal5cgfH1osCNNTDegY8PZBrfdui9w/viewform?vc=0&c=0&w=1&flr=0).
 3. If you are unable to access the form in step 2., please send an e-mail to:
 
@@ -47,8 +49,8 @@ Each `.csv` file contains the following columns:
    
    using `[PADISI USC Finger]: Dataset request` on the subject line and include:
     * Requester's Name (must be a project's principal investigator)
-    * Requester's Institution
     * Requester's Position
+    * Requester's Institution
     * Requester's Email (must be the professional email associated with the requester's institution)
     * <ins>Attachment</ins>: **Signed** Data Transfer and Use Agreement
 4. You will receive the download username/password and instructions upon approval and you can download the dataset within 30 days from approval.
@@ -83,9 +85,9 @@ The above command will load a python dictionary with the following entries:
     * *F*<sub>*S*</sub>: Channels `10-13` (4 images of SWIR data with order `[1200nm, 1300nm, 1450nm, 1550nm]`).
     * *F*<sub>*M*</sub>: Channels `14-20` (3 images of Visible and 4 of NIR data with order `[465nm, 591nm, white, 720nm, 780nm, 870nm, 940nm]`).
     * *B*<sub>*N*</sub>: Channels `21-23` (3 frames of Back-Illumination data - frames 10-12 out of 20 total frames).
-* `"identifiers"`: Each identifier is constructed as `ID_<transaction_id>_<trial_id>_<trial_name>` using the entries of the ground truth or partition files [above](#ground-truth-file). This identifier can be used to uniquely associate each sample in the `"data"` with their corresponding ground truth or partition.
+* `"identifiers"`: Each identifier is constructed as `ID_<transaction_id>_<trial_id>_<trial_name>` using the entries of the ground truth or partition files [above](#insground-truth-fileins). This identifier can be used to uniquely associate each sample in the `"data"` with their corresponding ground truth or partition.
 * `"labels"`: `False`: Bona-fide, `True`: Presentation attack.
-* `"pai_codes`: Ground truth code, using the rules discussed [above](#ground-truth-file).
+* `"pai_codes`: Ground truth code, using the rules discussed [above](#insground-truth-fileins).
 
 ## Example data loading (Requires installing custom packages)
 
@@ -110,11 +112,11 @@ The example code also works without PyTorch (if not installed).
             conda activate padisi
             python setup.py install
             ```
-   * **Running the example** (see [script](./scripts/finger_scripts/finger_data_example.py) for available flags):
+   * **Running the example** (see [script](./scripts/finger_scripts/finger_data_example.py) for flag explanation and additional available flags):
    
         ```
         conda activate padisi
-        python finger_data_example.py <add flags>
+        python finger_data_example.py -dbp ../../data/finger_partitions/padisi_USC_FINGER_dataset_partition_3folds_part0.csv -extractor_id FM_FS
         ```
 
 ## Licence
