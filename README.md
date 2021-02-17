@@ -40,20 +40,17 @@ Each `.csv` file contains the following columns:
 ## Downloading the dataset 
 
 1. Please download and sign the provided [Data Transfer and Use Agreement](./documents/PADISI_USC_Finger_Data_Sharing_Agreement.pdf). 
-Both the recipient (must be a project's principal investigator) and an official with authorized signatory of the recipient’s organization must sign the agreement. 
-For example, at a university, the official is typically an administrative official, rather than a student or faculty member.
+Both the recipient (must be a project's principal investigator) and an official authorized signatory of the recipient’s organization must sign the agreement. 
+For example, at a university, an authorized signatory is typically an administrative official, rather than a student or faculty member.
 2. Submit the request and upload your **signed** Data Transfer and Use Agreement at [PADISI-USC Finger Dataset Request](https://docs.google.com/forms/d/e/1FAIpQLSfPAX9JbmehkbD4ss3zVal5cgfH1osCNNTDegY8PZBrfdui9w/viewform?vc=0&c=0&w=1&flr=0).
-3. If you are unable to access the form in step 2., please send an e-mail to:
+3. You will receive the download username/password and instructions upon approval and you can download the dataset within 30 days from approval.
 
-   <img src="https://github.com/ISICV/PADISI_USC_Dataset/blob/main/images/e-mail.png" width="100"/> 
+If you have any questions about the data request process you can send an email to:
+
+<img src="https://github.com/ISICV/PADISI_USC_Dataset/blob/main/images/e-mail.png" width="100"/> 
    
-   using `[PADISI USC Finger]: Dataset request` on the subject line and include:
-    * Requester's Name (must be a project's principal investigator)
-    * Requester's Position
-    * Requester's Institution
-    * Requester's Email (must be the professional email associated with the requester's institution)
-    * <ins>Attachment</ins>: **Signed** Data Transfer and Use Agreement
-4. You will receive the download username/password and instructions upon approval and you can download the dataset within 30 days from approval.
+using `[PADISI USC Finger]: Dataset request question` on the subject line.
+
  
 ## Using the dataset (No custom package installation required)
 For ease of use, we are providing a preprocessed version of our *PADISI-USC* dataset 
