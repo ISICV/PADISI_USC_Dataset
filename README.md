@@ -1,6 +1,3 @@
-
-
-
 # PADISI USC Dataset
 This repository analyzes the PADISI-Finger dataset introduced in <img align="right" src="https://www.isi.edu/images/isi-logo.jpg" width="300"> [Multi-Modal Fingerprint Presentation Attack Detection: Evaluation On A New Dataset](https://arxiv.org/abs/2006.07498) and provides  
 instructions on how to [download](#downloading-the-dataset) and [use](#using-the-dataset-no-custom-package-required) the dataset. 
