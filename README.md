@@ -84,7 +84,7 @@ The above command will load a python dictionary with the following entries:
     * *B*<sub>*N*</sub>: Channels `21-23` (3 frames of Back-Illumination data - frames 10-12 out of 20 total frames).
 * `"identifiers"`: Each identifier is constructed as `ID_<transaction_id>_<trial_id>_<trial_name>` using the entries of the ground truth or partition files [above](#insground-truth-fileins). This identifier can be used to uniquely associate each sample in the `"data"` with their corresponding ground truth or partition.
 * `"labels"`: `False`: Bona-fide, `True`: Presentation attack.
-* `"pai_codes`: Ground truth code, using the rules discussed [above](#insground-truth-fileins).
+* `"pai_codes"`: Ground truth code, using the rules discussed [above](#insground-truth-fileins).
 
 ## Example data loading (Requires installing custom packages)
 
@@ -133,41 +133,66 @@ OR OTHER LEGAL THEORY), A BREACH OF ANY WARRANTY OR TERM OF THIS AGREEMENT, AND
 REGARDLESS OF WHETHER USC WAS ADVISED OR HAD REASON TO KNOW OF THE POSSIBILITY OF 
 INCURRING SUCH DAMAGES IN ADVANCE.
   
+  
 ## Bibliography
 If you use this dataset, please **cite the following publications**:
 
-[1] [Leonidas Spinoulas](https://scholar.google.com/citations?user=SAw0POgAAAAJ&hl=en), [Hengameh Mirzaalian](https://scholar.google.com/citations?user=BzaQhsoAAAAJ&hl=en), [Mohamed Hussein](https://scholar.google.com/citations?hl=en&user=jCUt0o0AAAAJ), and [Wael AbdAlmageed](https://scholar.google.com/citations?hl=en&user=tRGH8FkAAAAJ), “[Multi-Modal Fingerprint Presentation Attack Detection: Evaluation On A New Dataset](https://arxiv.org/abs/2006.07498)” <em>ArXiv</em>, vol. abs/2006.07498, 2020
+[1] [Leonidas Spinoulas](https://scholar.google.com/citations?user=SAw0POgAAAAJ&hl=en), 
+    [Hengameh Mirzaalian](https://scholar.google.com/citations?user=BzaQhsoAAAAJ&hl=en), 
+    [Mohamed Hussein](https://scholar.google.com/citations?hl=en&user=jCUt0o0AAAAJ), 
+    and [Wael AbdAlmageed](https://scholar.google.com/citations?hl=en&user=tRGH8FkAAAAJ), 
+    “[Multi-Modal Fingerprint Presentation Attack Detection: Evaluation On A New Dataset](https://ieeexplore.ieee.org/document/9399674)”, 
+    in <em>IEEE Transactions on Biometrics, Behavior, and Identity Science</em>, 
+    vol. 3, no. 3, pp. 347-364, July 2021, 
+    doi: [10.1109/TBIOM.2021.3072325](https://doi.org/10.1109/TBIOM.2021.3072325)
 
-[2] [Leonidas Spinoulas](https://scholar.google.com/citations?user=SAw0POgAAAAJ&hl=en), [Mohamed Hussein](https://scholar.google.com/citations?hl=en&user=jCUt0o0AAAAJ), [David Geissbühler](https://scholar.google.ch/citations?user=jbmrfWQAAAAJ&hl=fr), Joe Mathai, Oswin G. Almeida, Guillaume Clivaz, [Sébastien Marcel](https://scholar.google.com/citations?user=K9ku4jYAAAAJ&hl=en), and [Wael AbdAlmageed](https://scholar.google.com/citations?hl=en&user=tRGH8FkAAAAJ), 
-“[Multispectral Biometrics System Framework: Application to Presentation Attack Detection](https://arxiv.org/abs/2006.07489)” <em>ArXiv</em>, vol. abs/2006.07489, 2020
+[2] [Leonidas Spinoulas](https://scholar.google.com/citations?user=SAw0POgAAAAJ&hl=en), 
+    [Mohamed Hussein](https://scholar.google.com/citations?hl=en&user=jCUt0o0AAAAJ), 
+    [David Geissbühler](https://scholar.google.ch/citations?user=jbmrfWQAAAAJ&hl=fr), 
+    Joe Mathai, 
+    Oswin G. Almeida, 
+    Guillaume Clivaz, 
+    [Sébastien Marcel](https://scholar.google.com/citations?user=K9ku4jYAAAAJ&hl=en), 
+    and [Wael AbdAlmageed](https://scholar.google.com/citations?hl=en&user=tRGH8FkAAAAJ), 
+    “[Multispectral Biometrics System Framework: Application to Presentation Attack Detection](https://ieeexplore.ieee.org/document/9409166)”, 
+    in <em>IEEE Sensors Journal</em>, 
+    vol. 21, no. 13, pp. 15022-15041, July 2021,
+    doi: [10.1109/JSEN.2021.3074406](https://doi.org/10.1109/JSEN.2021.3074406)
+
 
 ```
 Bibtex format
 
-@article{Spinoulas2020a,
-  author    = {Leonidas Spinoulas and
-               Mohamed Hussein and
-               Hengameh Mirzaalian and 
-               Wael AbdAlmageed},
+@article{Spinoulas2021a,
+  author    = {Spinoulas, Leonidas and 
+               Mirzaalian, Hengameh and 
+               Hussein, Mohamed E. and 
+               AbdAlmageed, Wael},
   title     = {{Multi-Modal Fingerprint Presentation Attack Detection: Evaluation On A New Dataset}},
-  journal   = {ArXiv},
-  year      = {2020},
-  volume = {abs/2006.07498}
+  journal   = {IEEE Transactions on Biometrics, Behavior, and Identity Science},
+  year      = {2021},
+  volume    = {3},
+  number    = {3},
+  pages     = {347-364},
+  doi       = {10.1109/TBIOM.2021.3072325}
 }
 
 @article{Spinoulas2020b,
-  author    = {Leonidas Spinoulas and 
-               Mohamed Hussein and 
-               David Geissb{\"u}hler and 
-               Joe Mathai and 
-               Oswin G. Almeida and 
-               Guillaume Clivaz and 
-               S{\'e}bastien Marcel and 
-               Wael AbdAlmageed},
-  title     = {{Multi-Modal Fingerprint Presentation Attack Detection: Evaluation On A New Dataset}},
-  journal   = {ArXiv},
-  year      = {2020},
-  volume = {abs/2006.07498}
+  author    = {Spinoulas, Leonidas and 
+               Hussein, Mohamed E. and 
+               Geissb{\"u}hler, David and 
+               Mathai, Joe and 
+               Almeida, Oswin G. 
+               and Clivaz, Guillaume 
+               and Marcel, S{\'e}bastien 
+               and AbdAlmageed, Wael},
+  title     = {{Multispectral Biometrics System Framework: Application to Presentation Attack Detection}},
+  journal   = {IEEE Sensors Journal}, 
+  year      = {2021},
+  volume    = {21},
+  number    = {13},
+  pages     = {15022-15041},
+  doi       = {10.1109/JSEN.2021.3074406}
 }
 ```
 
