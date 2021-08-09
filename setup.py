@@ -11,5 +11,6 @@ setup(name='padisi_modules',
                 'padisi_modules.dataIO',
                 'padisi_modules.utils',
                 'padisi_modules.dataset_utils',
-                'padisi_modules.dataset_utils.finger_datasets'],
+                'padisi_modules.dataset_utils.finger_datasets',
+                'padisi_modules.dataset_utils.face_datasets'],
       zip_safe=False)

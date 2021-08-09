@@ -229,14 +229,6 @@ class PadisiH5Reader(DataReader):
         self.close_reader()
         return False
 
-    # def __del__(self):
-    #     """
-    #     Ensures that h5_file is closed at the end of execution if reader is deleted.
-    #
-    #     :return: None
-    #     """
-    #     self.close_reader()
-
     def get_reader_info_dict(self) -> OrderedDict:
         """
         Returns information about the reader as a dictionary.
@@ -1333,10 +1325,20 @@ class PadisiH5MultiLabelData(BiometricMultiLabelData):
                     'm425': 24,
                     'm426': 25,
                     'm428': 26,
-                    'm429': 27}
+                    'm429': 27},
+         'FACE': {'m000': 0,
+                  'm501': 1,
+                  'm502': 2,
+                  'm503': 3,
+                  'm504': 4,
+                  'm505': 5,
+                  'm506': 6,
+                  'm507': 7,
+                  'm508': 8,
+                  'm509': 9}
          }
 
-    def __init__(self, pai_code_label_mapping: dict, modality: str):
+    def __init__(self, modality: str, pai_code_label_mapping: (None, dict) = None):
         self.modality = modality
         super(PadisiH5MultiLabelData, self).__init__(pai_code_label_mapping)
 
