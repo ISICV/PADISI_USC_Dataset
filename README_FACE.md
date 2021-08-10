@@ -1,11 +1,11 @@
-# MAFPAD-Face USC Dataset
-This document analyzes the MAFPAD-Face dataset introduced in <img align="right" src="https://www.isi.edu/images/isi-logo.jpg" width="300"> [Detection and Continual Learning of Novel Face Presentation Attacks] and provides  
+# PADISI-Face USC Dataset
+This document analyzes the PADISI-Face dataset introduced in <img align="right" src="https://www.isi.edu/images/isi-logo.jpg" width="300"> [Detection and Continual Learning of Novel Face Presentation Attacks] and provides  
 instructions on how to [download](#downloading-the-dataset) and [use](#using-the-dataset-no-custom-package-installation-required) the dataset. 
 
 ## Dataset organization
 
 ### <ins>Ground truth file</ins>
-The ground truth file is located under [data/face_partitions/mafpad_USC_FACE_ground_truth.csv](./data/face_partitions/mafpad_USC_FACE_ground_truth.csv). The `.csv` file contains the following columns:
+The ground truth file is located under [data/face_partitions/padisi_USC_FACE_ground_truth.csv](./data/face_partitions/padisi_USC_FACE_ground_truth.csv). The `.csv` file contains the following columns:
 * `transaction_id`: Alphanumeric code defining a single data collection session for a participant.
 * `trial_id`: Alphanumeric code defining each independent capture of the participant.
 * `trial_name`: String describing capture conditions (e.g., if participant is wearing glasses or makes a specific facial expression).
@@ -13,8 +13,7 @@ The ground truth file is located under [data/face_partitions/mafpad_USC_FACE_gro
 * `ground_truth`: Ground truth code defined as:
     * `m00000`: Bona-fide
     * `m5<PAI_CODE><PAI_SPECIES>`: Presentation attack with `PAI_CODE = [01, 02, ..., 09]`, according to <em>**Table 1**</em> below.
-       `PAI_SPECIES = [01, ..., MAX_PAI_SPECIES_FOR_CODE]`, according to <em>**Table 1**</em> below (e.g., `[01, ..., 04]` for `PAI_CODE = 01`). Example: `m40502` represents a presentation attack of the 2nd species of code `05`, which is a `Gummy material finger`.
-       Note that only the *USC* columns of <em>**Table 1**</em> are relevant for the provided *PADISI-USC* portion of the dataset.
+       `PAI_SPECIES = [01, ..., MAX_PAI_SPECIES_FOR_CODE]`, according to <em>**Table 1**</em> below (e.g., `[01, ..., 12]` for `PAI_CODE = 01`). Example: `m50602` represents a presentation attack of the 2nd species of code `06`, which is `Makeup`.
                                
 * `participant_id`: Alphanumeric code uniquely defining each participant.
 * `gender`, `ethnicity`, `race`, `age`: Demographic information about the participant for each sample.
@@ -26,39 +25,39 @@ Each `.csv` file contains the following columns:
 * `partition_name`: One of `['train', 'valid', 'test']` specifying if a sample belongs to the `training`, `validation` or `testing` set, respectively.
 
 <code>
-<figcaption><b><em>Table 1</em></b> PAI counts in the collected datasets. For each PAI code, we provide a general PAI description, the number of different species as well as the attributes used for grouping PAI codes in terms of material, species, transparency, and attack type. PAI categories whose appearance depends heavily on the participant and preparation method are marked with *. Sponsor approval is required to release additional information about each PAI code.</figcaption></code>
-<img src="https://github.com/ISICV/PADISI_USC_Dataset/blob/main/images/PADISI_datasets_info.png" width="700"/>
+<figcaption><b><em>Table 1</em></b> PAI counts in the collected dataset. For each PAI code, we provide a general PAI description and the number of different species. Sponsor approval is required to release additional information about each PAI code.</figcaption></code>
+<img src="https://github.com/ISICV/PADISI_USC_Dataset/blob/main/images/PADISI_Face_dataset_info.png" width="700"/>
 
 ##
 <code>
-<figcaption><b><em>Table 2</em></b> <em>PADISI-USC</em> dataset statistics and demographics. </figcaption></code>
-<img src="https://github.com/ISICV/PADISI_USC_Dataset/blob/main/images/PADISI_statistics_demographics.png" width="700"/>
+<figcaption><b><em>Table 2</em></b> <em>PADISI-Face</em> dataset statistics and demographics. </figcaption></code>
+<img src="https://github.com/ISICV/PADISI_USC_Dataset/blob/main/images/PADISI_Face_statistics_demographics.png" width="700"/>
 
 ## Downloading the dataset 
 
-1. Please download and sign the provided [Data Transfer and Use Agreement](./documents/MAFPAD_USC_Face_Data_Sharing_Agreement.pdf). 
+1. Please download and sign the provided [Data Transfer and Use Agreement](./documents/PADISI_USC_Face_Data_Sharing_Agreement.pdf). 
 Both the recipient (must be a project's principal investigator) and an official authorized signatory of the recipient’s organization must sign the agreement. 
 For example, at a university, an authorized signatory is typically an administrative official, rather than a student or faculty member.
-2. Submit the request and upload your **signed** Data Transfer and Use Agreement at [MAFPAD-USC Face Dataset Request](https://docs.google.com/forms/d/e/1FAIpQLSfPAX9JbmehkbD4ss3zVal5cgfH1osCNNTDegY8PZBrfdui9w/viewform?vc=0&c=0&w=1&flr=0).
+2. Submit the request and upload your **signed** Data Transfer and Use Agreement at [PADISI-USC Face Dataset Request](https://docs.google.com/forms/d/e/1FAIpQLScZSems8SsIzcJS6zGqeNn4khiLRYNeIza_HNO2odKyeMmmNA/viewform?usp=sf_link).
 3. You will receive the download username/password and instructions upon approval and you can download the dataset within 30 days from approval.
 
 If you have any questions about the data request process you can send an email to:
 
 <img src="https://github.com/ISICV/PADISI_USC_Dataset/blob/main/images/e-mail.png" width="100"/> 
    
-using `[MAFPAD USC Face]: Dataset request question` on the subject line.
+using `[PADISI USC Face]: Dataset request question` on the subject line.
 
  
 ## Using the dataset (No custom package installation required)
-For ease of use, we are providing a preprocessed version of our *MAFPAD-USC* dataset 
-(used in the experiments presented in [Multi-Modal Fingerprint Presentation Attack Detection: Evaluation On A New Dataset](https://arxiv.org/abs/2006.07498)). When you download the preprocessed data, you will receive a 
-file ```mafpad_USC_FACE_preprocessed.bz2``` which can be loaded in Python using the joblib package 
+For ease of use, we are providing a preprocessed version of our *PADISI-Face* dataset 
+(used in the experiments presented in [Detection and Continual Learning of Novel Face Presentation Attacks]). When you download the preprocessed data, you will receive a 
+file ```padisi_USC_FACE_preprocessed.bz2``` which can be loaded in Python using the joblib package 
 (see [conda installation](https://anaconda.org/anaconda/joblib) or 
 [pip installation](https://joblib.readthedocs.io/en/latest/installing.html)) as:
 
 ```
 import joblib
-data_dict = joblib.load("mafpad_USC_FACE_preprocessed.bz2")
+data_dict = joblib.load("padisi_USC_FACE_preprocessed.bz2")
 ``` 
 
 The above command will load a python dictionary with the following entries:
@@ -66,7 +65,7 @@ The above command will load a python dictionary with the following entries:
 ```
 "data"       : 4d numpy array of shape (2029, 3, 160, 80)  
                - 2029: total number of samples
-               -    3: total number of image channels per sample - each channel is normalized in 0-1 based on camera's bit depth.
+               -    3: total number of image channels per sample - each channel is normalized in 0-1 based on camera's bit depth
                -  320: image height
                -  256: image width
 "identifiers": list of 2029 string identifiers for all samples (unique string identifier per sample)
@@ -102,11 +101,11 @@ The example code also works without PyTorch (if not installed).
             conda activate padisi
             python setup.py install
             ```
-   * **Running the example** (see [script](./scripts/finger_scripts/finger_data_example.py) for flag explanation and additional available flags):
+   * **Running the example** (see [script](./scripts/face_scripts/face_data_example.py) for flag explanation and additional available flags):
    
         ```
         conda activate padisi
-        python face_data_example.py -dbp ../../data/face_partitions/mafpad_USC_FACE_dataset_partition_3folds_part0.csv -extractor_id COLOR
+        python face_data_example.py -dbp ../../data/face_partitions/padisi_USC_FACE_dataset_partition_3folds_part0.csv -extractor_id COLOR
         ```
 
 ## Licence
@@ -130,19 +129,18 @@ INCURRING SUCH DAMAGES IN ADVANCE.
 ## Bibliography
 If you use this dataset, please **cite the following publications**:
 
-[1] [Leonidas Spinoulas](https://scholar.google.com/citations?user=SAw0POgAAAAJ&hl=en), 
-    [Hengameh Mirzaalian](https://scholar.google.com/citations?user=BzaQhsoAAAAJ&hl=en), 
-    [Mohamed Hussein](https://scholar.google.com/citations?hl=en&user=jCUt0o0AAAAJ), 
+[1] [Mohammad Rostami](https://scholar.google.ca/citations?user=Uzx8nLoAAAAJ&hl=en),
+    [Leonidas Spinoulas](https://scholar.google.com/citations?user=SAw0POgAAAAJ&hl=en), 
+    [Mohamed Hussein](https://scholar.google.com/citations?hl=en&user=jCUt0o0AAAAJ),
+    [Joe Mathai](https://github.com/joemathai), 
     and [Wael AbdAlmageed](https://scholar.google.com/citations?hl=en&user=tRGH8FkAAAAJ), 
-    “[Multi-Modal Fingerprint Presentation Attack Detection: Evaluation On A New Dataset](https://ieeexplore.ieee.org/document/9399674)”, 
-    in <em>IEEE Transactions on Biometrics, Behavior, and Identity Science</em>, 
-    vol. 3, no. 3, pp. 347-364, July 2021, 
-    doi: [10.1109/TBIOM.2021.3072325](https://doi.org/10.1109/TBIOM.2021.3072325)
-
+    “[Detection and Continual Learning of Novel Face Presentation Attacks]”, 
+    in <em>International Conference on Computer Vision</em>, 2021 
+    
 [2] [Leonidas Spinoulas](https://scholar.google.com/citations?user=SAw0POgAAAAJ&hl=en), 
     [Mohamed Hussein](https://scholar.google.com/citations?hl=en&user=jCUt0o0AAAAJ), 
     [David Geissbühler](https://scholar.google.ch/citations?user=jbmrfWQAAAAJ&hl=fr), 
-    Joe Mathai, 
+    [Joe Mathai](https://github.com/joemathai), 
     Oswin G. Almeida, 
     Guillaume Clivaz, 
     [Sébastien Marcel](https://scholar.google.com/citations?user=K9ku4jYAAAAJ&hl=en), 
@@ -156,18 +154,15 @@ If you use this dataset, please **cite the following publications**:
 ```
 Bibtex format
 
-@article{Spinoulas2021a,
-  author    = {Spinoulas, Leonidas and 
-               Mirzaalian, Hengameh and 
-               Hussein, Mohamed E. and 
+@article{Rostami2021,
+  author    = {Rostami, Mohammad and
+               Spinoulas, Leonidas and 
+               Hussein, Mohamed E. and
+               Mathai, Joe and 
                AbdAlmageed, Wael},
-  title     = {{Multi-Modal Fingerprint Presentation Attack Detection: Evaluation On A New Dataset}},
-  journal   = {IEEE Transactions on Biometrics, Behavior, and Identity Science},
-  year      = {2021},
-  volume    = {3},
-  number    = {3},
-  pages     = {347-364},
-  doi       = {10.1109/TBIOM.2021.3072325}
+  title     = {{Detection and Continual Learning of Novel Face Presentation Attacks}},
+  journal   = {Internation Conference on Computer Vision (ICCV)},
+  year      = {2021}
 }
 
 @article{Spinoulas2020b,

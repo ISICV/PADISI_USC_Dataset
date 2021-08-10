@@ -13,23 +13,23 @@ except ModuleNotFoundError:
 # Example use:
 #   The code assumes that:
 #   -- The pre-processed data have been downloaded and are under data/face_data/preprocessed/
-#      mafpad_USC_FACE_preprocessed.bz2 - Provide a different path otherwise through the (-data_file) flag.
+#      padisi_USC_FACE_preprocessed.bz2 - Provide a different path otherwise through the (-data_file) flag.
 #   -- We select the 3fold_part0 partition (see all partitions under data/face_partitions)
 #   -- We select COLOR data.
 #
 #   conda activate padisi
 #   python face_data_example.py
-#          -dbp ../../data/face_partitions/mafpad_USC_FACE_dataset_partition_3folds_part0.csv
+#          -dbp ../../data/face_partitions/padisi_USC_FACE_dataset_partition_3folds_part0.csv
 #          -extractor_id COLOR
 def main():
     parser = argparse.ArgumentParser(description='Arguments for testing the creation of a PyTorch loader.')
     parser.add_argument('-data_file', dest='data_file', type=str,
                         default=os.path.join('..', '..', 'data', 'face_data', 'preprocessed',
-                                             'mafpad_USC_FACE_preprocessed.bz2'),
+                                             'padisi_USC_FACE_preprocessed.bz2'),
                         help='Path to the .bz2 file containing the pre-processed data.')
     parser.add_argument('-gt', dest='ground_truth_file', type=str,
                         default=os.path.join('..', '..', 'data', 'face_partitions',
-                                             'mafpad_USC_FACE_ground_truth.csv'),
+                                             'padisi_USC_FACE_ground_truth.csv'),
                         help='Path to the .csv file containing the ground truth for the dataset')
     parser.add_argument('-dbp', dest='dataset_partition_file', type=str, required=True,
                         help="Path to the .csv file containing dataset partitioning into 'train', 'valid' and "
