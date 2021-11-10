@@ -1,6 +1,7 @@
 # PADISI-Face USC Dataset
-This document analyzes the PADISI-Face dataset introduced in <img align="right" src="https://www.isi.edu/images/isi-logo.jpg" width="300"> [Detection and Continual Learning of Novel Face Presentation Attacks] and provides  
-instructions on how to [download](#downloading-the-dataset) and [use](#using-the-dataset-no-custom-package-installation-required) the dataset. 
+This document analyzes the PADISI-Face dataset introduced in <img align="right" src="https://www.isi.edu/images/isi-logo.jpg" width="300"> [Detection and Continual Learning of Novel Face Presentation Attacks](https://openaccess.thecvf.com/content/ICCV2021/html/Rostami_Detection_and_Continual_Learning_of_Novel_Face_Presentation_Attacks_ICCV_2021_paper.html) and provides  
+instructions on how to [download](#downloading-the-dataset) and [use](#using-the-dataset-no-custom-package-installation-required) the dataset. Additionally, it provides sentence descriptions for all available samples as introduced 
+in [Explaining  Face  Presentation  Attack  Detection  Using  Natural  Language](https://arxiv.org/abs/2111.04862).  
 
 ## Dataset organization
 
@@ -32,6 +33,13 @@ Each `.csv` file contains the following columns:
 <code>
 <figcaption><b><em>Table 2</em></b> <em>PADISI-Face</em> dataset statistics and demographics. </figcaption></code>
 <img src="https://github.com/ISICV/PADISI_USC_Dataset/blob/main/images/PADISI_Face_statistics_demographics.png" width="700"/>
+
+### <ins>Text descriptions per sample<ins>
+All text descriptions used in the experiments presented in [Explaining  Face  Presentation  Attack  Detection  Using  Natural  Language](https://arxiv.org/abs/2111.04862) can be found under
+[data/face_partitions/padisi_USC_FACE_descriptions.csv](./data/face_partitions/padisi_USC_FACE_descriptions.csv). The provided `.csv` file contains the following columns:
+* `transaction_id`, `trial_id`, `trial_name`: Same as in the ground truth, [above](#insground-truth-fileins). Can be used to uniquely associate each row of the descriptions `.csv` file to a row in the ground truth `.csv` file.
+* `des0`, `des1`, `des2`, `des3`, `des4`: 5 freeform text descriptions for each sample. 
+
 
 ## Downloading the dataset 
 
@@ -134,8 +142,8 @@ If you use this dataset, please **cite the following publications**:
     [Mohamed Hussein](https://scholar.google.com/citations?hl=en&user=jCUt0o0AAAAJ),
     [Joe Mathai](https://github.com/joemathai), 
     and [Wael AbdAlmageed](https://scholar.google.com/citations?hl=en&user=tRGH8FkAAAAJ), 
-    “[Detection and Continual Learning of Novel Face Presentation Attacks]”, 
-    in <em>International Conference on Computer Vision</em>, 2021 
+    ["Detection and Continual Learning of Novel Face Presentation Attacks"](https://openaccess.thecvf.com/content/ICCV2021/html/Rostami_Detection_and_Continual_Learning_of_Novel_Face_Presentation_Attacks_ICCV_2021_paper.html), 
+    in <em>Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)</em>, 2021, pp. 14851-14860
     
 [2] [Leonidas Spinoulas](https://scholar.google.com/citations?user=SAw0POgAAAAJ&hl=en), 
     [Mohamed Hussein](https://scholar.google.com/citations?hl=en&user=jCUt0o0AAAAJ), 
@@ -145,24 +153,31 @@ If you use this dataset, please **cite the following publications**:
     Guillaume Clivaz, 
     [Sébastien Marcel](https://scholar.google.com/citations?user=K9ku4jYAAAAJ&hl=en), 
     and [Wael AbdAlmageed](https://scholar.google.com/citations?hl=en&user=tRGH8FkAAAAJ), 
-    “[Multispectral Biometrics System Framework: Application to Presentation Attack Detection](https://ieeexplore.ieee.org/document/9409166)”, 
+    ["Multispectral Biometrics System Framework: Application to Presentation Attack Detection"](https://ieeexplore.ieee.org/document/9409166), 
     in <em>IEEE Sensors Journal</em>, 
     vol. 21, no. 13, pp. 15022-15041, July 2021,
     doi: [10.1109/JSEN.2021.3074406](https://doi.org/10.1109/JSEN.2021.3074406)
+
+If you further use the [text descriptions](#instext-descriptions-per-sampleins), please **cite the following publication**:
+
+[3] [Hengameh Mirzaalian](https://scholar.google.ca/citations?user=BzaQhsoAAAAJ&hl=en),
+    [Mohamed Hussein](https://scholar.google.com/citations?hl=en&user=jCUt0o0AAAAJ),
+    [Leonidas Spinoulas](https://scholar.google.com/citations?user=SAw0POgAAAAJ&hl=en),
+    [Jonathan May](https://scholar.google.com/citations?user=tmK5EPEAAAAJ&hl=en),
+    and [Wael AbdAlmageed](https://scholar.google.com/citations?hl=en&user=tRGH8FkAAAAJ),
+    ["Explaining  Face  Presentation  Attack  Detection  Using  Natural  Language"](https://arxiv.org/abs/2111.04862), in <em>IEEE International Conference on Automatic Face and Gesture Recognition</em>, 2021
 
 
 ```
 Bibtex format
 
-@article{Rostami2021,
-  author    = {Rostami, Mohammad and
-               Spinoulas, Leonidas and 
-               Hussein, Mohamed E. and
-               Mathai, Joe and 
-               AbdAlmageed, Wael},
-  title     = {{Detection and Continual Learning of Novel Face Presentation Attacks}},
-  journal   = {Internation Conference on Computer Vision (ICCV)},
-  year      = {2021}
+@InProceedings{Rostami_2021_ICCV,
+    author    = {Rostami, Mohammad and Spinoulas, Leonidas and Hussein, Mohamed and Mathai, Joe and Abd-Almageed, Wael},
+    title     = {Detection and Continual Learning of Novel Face Presentation Attacks},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2021},
+    pages     = {14851-14860}
 }
 
 @article{Spinoulas2020b,
@@ -182,6 +197,20 @@ Bibtex format
   pages     = {15022-15041},
   doi       = {10.1109/JSEN.2021.3074406}
 }
+
+@misc{mirzaalian2021explaining,
+      title={Explaining Face Presentation Attack Detection Using Natural Language}, 
+      author={Hengameh Mirzaalian and 
+              Mohamed E. Hussein and 
+              Leonidas Spinoulas and 
+              Jonathan May and 
+              Wael Abd-Almageed},
+      year={2021},
+      eprint={2111.04862},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+
 ```
 
 ## Acknowledgment
